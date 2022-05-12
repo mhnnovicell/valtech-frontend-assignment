@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container flex flex-col">
+  <div id="app" class="container px-4 mx-4">
     <ProductList></ProductList>
   </div>
 </template>
