@@ -1,5 +1,8 @@
 # valtech-frontend-assignment
 
+Based on Vue CLI - using Vue 2, Tailwind and Typescript (Vue Class Component) - https://class-component.vuejs.org/
+
+
 ## Project setup
 ```
 npm install
