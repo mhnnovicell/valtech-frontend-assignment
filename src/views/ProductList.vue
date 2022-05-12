@@ -1,12 +1,19 @@
 <template>
   <div class="flex w-full">
     <section class="text-gray-600 body-font w-4/12">
+      <!-- Productlist filtering https://stackoverflow.com/questions/51860848/product-filter-using-vue-js -->
       <p>filter</p>
     </section>
     <section class="text-gray-600 body-font w-8/12">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-4">
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <h1>{{ productData.headline }}</h1>
+          <div
+            class="lg:w-1/4 md:w-1/2 p-4 w-full"
+            v-for="(productListData, productDataIdx) in productData.articles"
+            :key="productDataIdx"
+          >
+            {{ productListData }}
             <a class="block relative h-48 rounded overflow-hidden">
               <img
                 alt="ecommerce"
@@ -158,6 +165,12 @@
 
 <script>
 import Vue from 'vue';
+import productDataJson from '../data/case/products.json';
+import Component from 'vue-class-component';
 
-export default class ProductList extends Vue {}
+// You can declare mixins as the same style as components.
+@Component
+export default class ProductList extends Vue {
+  productData = productDataJson;
+}
 </script>
