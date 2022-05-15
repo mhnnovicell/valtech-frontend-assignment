@@ -194,6 +194,7 @@ import Component from 'vue-class-component';
 // Including @component otherwise Vue class components doesnt work
 @Component
 export default class ProductList extends Vue {
+  //Data props - start
   productData = productDataJson;
 
   manufacturersFilters = [];
@@ -203,6 +204,7 @@ export default class ProductList extends Vue {
   defaultNumberOfProducts = 12;
 
   pageNumber = 1;
+  //Data props - end
 
   //Computed start
   get filteredProducts() {
